@@ -1,6 +1,7 @@
-package org.example.K7.HarvestFestival;
+package org.example.K7.Kata;
 
 //test to be checked
+//solution ok, not passing test
 
 import junit.framework.TestCase;
 

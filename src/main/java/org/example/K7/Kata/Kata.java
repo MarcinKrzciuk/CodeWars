@@ -1,4 +1,4 @@
-package org.example.K7.HarvestFestival;
+package org.example.K7.Kata;
 
 public class Kata {
     public static String plant(char seed, int water, int fert, int temp) {
