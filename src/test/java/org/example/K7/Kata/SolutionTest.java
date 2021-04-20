@@ -1,11 +1,13 @@
 package org.example.K7.Kata;
 
-//test to be checked
-//solution ok, not passing test
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class HarvestFestivalTest extends TestCase {
+import static org.junit.Assert.assertEquals;
+
+
+public class SolutionTest {
+    @Test
     public void sampleTests() {
         assertEquals("---,,,,,,,---,,,,,,,---,,,,,,,", Kata.plant(',', 3, 7, 25));
         assertEquals("-+", Kata.plant('+', 1, 3, 15));
