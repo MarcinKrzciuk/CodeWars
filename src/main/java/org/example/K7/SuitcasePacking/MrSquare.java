@@ -5,21 +5,16 @@ package org.example.K7.SuitcasePacking;
 
 public class MrSquare {
     public static Boolean fit_in(int a, int b, int m, int n) {
+
         int small = n < m ? n : m;
         int longer = n > m ? n : m;
-        boolean fit = false;
 
         if (a > small || b > small) {
-           fit = false;
+            return false;
+        } else if
+        (a + b > longer) {
+            return false;
         }
-
-        if (a + b > longer) {
-           fit = false;
-        }
-
-        if (a + b <= longer) {
-            fit = true;
-        }
-        return fit;
+        return true;
     }
 }
