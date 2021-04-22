@@ -1,4 +1,4 @@
-package org.example.K6.Meeting.CountingDuplicates;
+package org.example.K6.CountingDuplicates;
 
 
 //  Write a function that will return the count of distinct case-insensitive alphabetic characters

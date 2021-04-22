@@ -1,4 +1,4 @@
-package org.example.K6.Meeting.CountingDuplicates;
+package org.example.K6.CountingDuplicates;
 
 
 import org.junit.Test;
