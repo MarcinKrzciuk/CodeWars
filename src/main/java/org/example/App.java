@@ -2,60 +2,68 @@ package org.example;
 
 import java.util.*;
 
-public class App { public static void main(String[] args ) {
+public class App {
+    private static final Map<String, Character> morseAlphabet = new HashMap<>();
 
-//    String s = "Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill";
-//
-//    Map<String, String> mymap = new HashMap<>();
-//
-//    String[] pairs = s.split(";");
-//    for (int i = 0; i < pairs.length; i++) {
-//        String pair = pairs[i];
-//        String[] keyValue = pair.split(":");
-//        mymap.put(keyValue[0], keyValue[1]);
-//    }
+    static {
+        morseAlphabet.put(".-", 'A');
+        morseAlphabet.put("-...", 'B');
+        morseAlphabet.put("-.-.", 'C');
+        morseAlphabet.put("-..", 'D');
+        morseAlphabet.put(".", 'E');
+        morseAlphabet.put("..-.", 'F');
+        morseAlphabet.put("--.", 'G');
+        morseAlphabet.put("....", 'H');
+        morseAlphabet.put("..", 'I');
+        morseAlphabet.put(".---", 'J');
+        morseAlphabet.put("-.-", 'K');
+        morseAlphabet.put(".-..", 'L');
+        morseAlphabet.put("--", 'M');
+        morseAlphabet.put("-.", 'N');
+        morseAlphabet.put("---", 'O');
+        morseAlphabet.put(".--.", 'P');
+        morseAlphabet.put("--.-", 'Q');
+        morseAlphabet.put(".-.", 'R');
+        morseAlphabet.put("...", 'S');
+        morseAlphabet.put("-", 'T');
+        morseAlphabet.put("..-", 'U');
+        morseAlphabet.put("...-", 'V');
+        morseAlphabet.put(".--", 'W');
+        morseAlphabet.put("-..-", 'X');
+        morseAlphabet.put("-.--", 'Y');
+        morseAlphabet.put("--..", 'Z');
+        morseAlphabet.put("-----", '0');
+        morseAlphabet.put(".----", '1');
+        morseAlphabet.put("..---", '2');
+        morseAlphabet.put("...--", '3');
+        morseAlphabet.put("....-", '4');
+        morseAlphabet.put(".....", '5');
+        morseAlphabet.put("-....", '6');
+        morseAlphabet.put("--...", '7');
+        morseAlphabet.put("---..", '8');
+        morseAlphabet.put("----.", '9');
+    }
 
-    HashMap<Character, String> morse = new HashMap<>();
-    morse.put('a', ".-");
-    morse.put('b', "-...");
-    morse.put('c', "-.-");
-    morse.put('d', "-..");
-    morse.put('e', ".");
-    morse.put('f', "..-.");
-    morse.put('g', "--.");
-    morse.put('h', "....");
-    morse.put('i', "..");
-    morse.put('j', ".---");
-    morse.put('k', "-.");
-    morse.put('l', ".-..");
-    morse.put('m', "--");
-    morse.put('n', "-.");
-    morse.put('o', "---");
-    morse.put('p', ".--.");
-    morse.put('q', "--.-");
-    morse.put('r', ".-.");
-    morse.put('s', "...");
-    morse.put('t', "-");
-    morse.put('u', "..-");
-    morse.put('v', "...-");
-    morse.put('w', ".--");
-    morse.put('x', "-..-");
-    morse.put('y', "-.--");
-    morse.put('z', "--..");
-    morse.put('1', ".----");
-    morse.put('2', "..---");
-    morse.put('3', "...--");
-    morse.put('4', "....-");
-    morse.put('5', ".....");
-    morse.put('6', "-....");
-    morse.put('7', "--...");
-    morse.put('8', "---..");
-    morse.put('9', "----.");
-    morse.put('0', "-----");
+    public static void main(String[] args) {
 
-    String txt = "···· · −·−−   ·−−− ··− −·· ·";
+        String txt = "···· · −·−−   ·−−− ··− −·· ·";
+        String txt2 = decode(txt);
+        System.out.println(decode(txt2));
 
-    ArrayList<String> converttxt = new ArrayList<>();
+    }
+
+    private static String decode(String morse) {
+        StringBuilder decoded = new StringBuilder();
+
+        String[] words = morse.split(" ");
+        for (String word : words) {
+            decoded.append(' ');
+            String[] letters = word.split(" ");
+            for (String letter : letters) {
+                decoded.append(morseAlphabet.get(letter));
+            }
+        }
+
+        return decoded.substring(1);
+    }
 }
-}
-
