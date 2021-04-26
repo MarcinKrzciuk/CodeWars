@@ -20,7 +20,14 @@ package org.example.K6.DecodeTheMorseCode;
 
 public class MorseCodeDecoder {
     public static String decode(String morseCode) {
-        // your brilliant code here, remember that you can access the preloaded Morse code table through MorseCode.get(code)
-        return morseCode;
+        String result = "";
+        for(String word : morseCode.trim().split("   ")) {
+            for(String letter : word.split("\\s+")) {
+                //result += MorseCode.get(letter); //MorseCode was pre-loaded in CodeWars;
+            }
+            result += ' ';
+        }
+        return result.trim();
+
     }
 }
