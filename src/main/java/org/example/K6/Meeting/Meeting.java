@@ -1,6 +1,4 @@
 
-
-
 //        John has invited some friends. His list is:
 //        s = "Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill";
 //        Could you make a program that
@@ -21,10 +19,6 @@ import java.util.Map;
 public class Meeting {
     public static String meeting(String s) {
         Map<String, String> mymap = new HashMap<>();
-
-
-
-
 
         return s;
     }
