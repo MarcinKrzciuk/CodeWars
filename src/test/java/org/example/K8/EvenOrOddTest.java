@@ -1,5 +1,6 @@
-package org.example.K8.evenOdd;
+package org.example.K8;
 
+import org.example.K8.evenOdd.EvenOrOdd;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,4 +1,4 @@
-package org.example.K8.evenOdd.YesOrNo;
+package org.example.K8.YesOrNo;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
