@@ -63,7 +63,27 @@ package org.example.K6.FinancingPurchase;
 public class Finance {
     public static String amort(double rate, int bal, int term, int num_payments) {
 
-
-        return "";
+//        double loanAmount;
+//        double c;
+//        double balance1;
+//        double prince = 0;
+//        int count = 0;
+//
+//        c = bal * Math.pow(1 + rate / 100 /12, term * 12) * (rate / 100 /12) / (Math.pow(1 + rate / 100 / 12, term * 12) - 1);
+//
+//        for (int i = 0; i < term * 12; i++) {
+//            prince = rate * bal;
+//            balance1 = bal - (c - prince);
+//            loanAmount = bal;
+//            count++;
+//            if (count == num_payments) {
+//                break;
+//            }
+//        }
+//        System.out.println(prince);
+//
+//        System.out.println(String.format("num_payment %d c %.0f princ %.0f int %.0f balance %.0f", num_payments, c, c-prince, prince, loanAmount ));
+//
+      return "";
     }
 }
