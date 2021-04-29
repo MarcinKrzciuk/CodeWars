@@ -47,6 +47,8 @@ public class Kata {
         int score = 0;
 
         for (int i = 0; i < text.length(); i++)  {
+            System.out.println("text " + text);
+            System.out.println("tutaj bug" + mymap.get(text.charAt(i)));
             score += mymap.get(text.charAt(i));
         }
         return score;
