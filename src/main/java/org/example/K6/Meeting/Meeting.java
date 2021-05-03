@@ -13,13 +13,24 @@
 //        It can happen that in two distinct families with the same family name two people have the same first name too.
 
 package org.example.K6.Meeting;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Meeting {
     public static String meeting(String s) {
-        Map<String, String> mymap = new HashMap<>();
+        String s1, s2;
+        s1 = s.replace(':', ',');
+        s2 = s1.toUpperCase();
+        List<String> list = Arrays.asList(s2.split(";"));
 
-        return s;
+        for (int i = 0; i < list.size(); i++) {
+            String[] divide = list.get(i).split(",");
+            String name1 = divide[0];
+            String name2 = divide[1];
+            list.set(i, "(" +name2 + ", " + name1 +")");
+        }
+
+        Collections.sort(list);
+
+        return String.join("", list);
     }
 }
