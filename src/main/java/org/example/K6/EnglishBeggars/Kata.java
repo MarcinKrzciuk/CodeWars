@@ -13,8 +13,6 @@ package org.example.K6.EnglishBeggars;
 //        Also note that not all beggars have to take the same amount of "offers", meaning that the length of the array
 //        is not necessarily a multiple of n; length can be even shorter, in which case the last beggars will of course take nothing (0).
 
-
-
 public class Kata {
     public static int[] beggars(int[] values, int n) {
         int [] list1 = new int[n];
