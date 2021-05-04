@@ -1,4 +1,4 @@
-package org.example.K6.WhoLikesIt.Solution;
+package org.example.K6.WhoLikesIt;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

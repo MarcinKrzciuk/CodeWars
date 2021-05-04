@@ -1,4 +1,4 @@
-package org.example.K6.WhoLikesIt.Solution;
+package org.example.K6.WhoLikesIt;
 
 public class Solution {
     public static String whoLikesIt(String... names) {
