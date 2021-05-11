@@ -1,8 +1,5 @@
 package org.example.K6.CharacterWithLongestConsecutiveRepetition;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 public class Solution {
     public static Object[] longestRepetition(String s) {
@@ -11,16 +8,23 @@ public class Solution {
             return new Object[]{"", 0};
         }
 
-        List<Character> list = s.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
-        Map<Character, Long> counts = list.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
+        int count = 0;
+        char res = s.charAt(0);
 
-        Map.Entry<Character, Long> max = null;
-        for(Map.Entry<Character, Long> price: counts.entrySet()) {
-            if (max == null || price.getValue().compareTo(max.getValue()) > 0) {
-                max = price;
+        for (int i=0; i<s.length(); i++) {
+            int cur_count = 1;
+            for (int j=i+1; j<s.length(); j++) {
+                if (s.charAt(i) != s.charAt(j))
+                break;
+                cur_count++;
+            }
+
+            if (cur_count > count) {
+                count = cur_count;
+                res = s.charAt(i);
             }
         }
 
-        return new Object[]{max.getKey().toString(), Math.toIntExact(max.getValue())};
+        return new Object[]{Character.toString(res), count};
     }
 }
