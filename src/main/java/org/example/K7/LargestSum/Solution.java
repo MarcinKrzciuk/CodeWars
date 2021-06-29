@@ -1,17 +1,12 @@
 package org.example.K7.LargestSum;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+
+import java.util.Arrays;
 
 public class Solution {
     public static int largestPairSum(int[] numbers){
-        List<Integer> intList = new ArrayList<>(numbers.length);
-        for (int i : numbers) {
-            intList.add(i);
-        }
-        Collections.sort(intList);
+        Arrays.sort(numbers);
 
-        return  intList.get(numbers.length -1) + intList.get(numbers.length -2);
+        return  numbers[numbers.length -1] + numbers[numbers.length -2];
     }
 }
