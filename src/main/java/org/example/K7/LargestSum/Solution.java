@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Solution {
     public static int largestPairSum(int[] numbers){
-        List<Integer> intList = new ArrayList<Integer>(numbers.length);
+        List<Integer> intList = new ArrayList<>(numbers.length);
         for (int i : numbers) {
             intList.add(i);
         }
