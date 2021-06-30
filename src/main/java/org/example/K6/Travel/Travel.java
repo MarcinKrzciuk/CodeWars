@@ -31,7 +31,12 @@ public class Travel {
         }
         str.setLength(str.length() - 1);
 
-        end = zipcode + ":" + String.valueOf(str);
+        if (list2.size() == 0) {
+            end = zipcode + ":/";
+        } else {
+            end = zipcode + ":" + String.valueOf(str);
+        }
+
         return end;
     }
 }
