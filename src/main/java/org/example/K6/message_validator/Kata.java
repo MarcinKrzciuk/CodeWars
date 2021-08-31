@@ -5,19 +5,25 @@ public class Kata {
         int count = 0;
         boolean check = false;
 
-        if (message.isEmpty()) {
-            check = true;
-        }
-
         String[] text = message.split("(?=\\d)(?<!\\d)");
         int[] length = new int[text.length];
 
-        for (int i = 0; i < text.length; i++) {
-            length[i] = Integer.parseInt(text[i].replaceAll("[^0-9]", ""));
+        if (message.equals("")) {
+            check = true;
         }
 
         for (int i = 0; i < text.length; i++) {
+            text[i] = text[i].replaceAll("[^0-9]", "");
+            if (text[i].length() > 0) {
+                length[i] = Integer.valueOf(text[i]);
+                System.out.println(length[i]);
+            }
+        }
+
+        text = message.split("(?=\\d)(?<!\\d)");
+        for (int i = 0; i < text.length; i++) {
             text[i] = text[i].replaceAll("\\d", "");
+            System.out.println(text[i]);
         }
 
         for (int i = 0; i < text.length; i++) {
@@ -32,7 +38,6 @@ public class Kata {
         if (count != text.length) {
             check = false;
         }
-
 
         return check;
     }
