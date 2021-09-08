@@ -4,18 +4,14 @@ import java.util.Arrays;
 
 public class AreSame {
     public static boolean comp(int[] a, int[] b) {
+        if (a == null || b == null) return false;
+        if (a.length != b.length) return false;
+
+        for (int i = 0; i < a.length; i++) {
+            a[i] = a[i] * a[i];
+        }
         Arrays.sort(a);
         Arrays.sort(b);
-
-        boolean test = false;
-
-        int[] check = new int [a.length];
-
-        for (int i = 0; i < check.length; i++) {
-            if (a[i] * a[i] == b[i]) {
-                test = true;
-            }
-        }
-        return test;
+        return Arrays.equals(a,b);
     }
 }
